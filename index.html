@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Legend of Zack Attack — Class of 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bangers&family=Caveat:wght@600;700&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:      #080808;
+    --black-mid:  #111111;
+    --black-card: #1a1a1a;
+    --black-soft: #222222;
+    --gold:       #D4A017;
+    --gold-light: #FFE066;
+    --gold-dim:   #8B6000;
+    --green:      #3a9a4a;
+    --green-light:#5abf6a;
+    --green-pale: #0d1f0f;
+    --white:      #ffffff;
+    --muted:      rgba(255,255,255,0.55);
+    --body-text:  rgba(255,255,255,0.85);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    font-family: 'Nunito', sans-serif;
+    color: var(--body-text);
+    overflow-x: hidden;
+  }
+
+  /* ── METALLIC GOLD TEXT ── */
+  .gold-text {
+    background: linear-gradient(135deg, var(--gold-dim) 0%, var(--gold) 30%, var(--gold-light) 55%, var(--gold) 75%, var(--gold-dim) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── SHINE BAR ── */
+  .shine-bar {
+    height: 6px;
+    background: linear-gradient(90deg,
+      var(--green) 0%, var(--green-light) 8%,
+      var(--gold-dim) 15%, var(--gold) 30%,
+      var(--gold-light) 50%, var(--gold) 70%,
+      var(--gold-dim) 85%, var(--green-light) 92%,
+      var(--green) 100%);
+  }
+
+  /* ── PHOTO PLACEHOLDER ── */
+  .ph {
+    background: var(--black-soft);
+    border: 2px dashed rgba(212,160,23,0.25);
+    border-radius: 10px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 6px; color: rgba(255,255,255,0.3);
+    font-weight: 800; font-size: 0.7rem;
+    letter-spacing: 1px; text-transform: uppercase;
+    text-align: center; width: 100%; height: 100%;
+  }
+  .ph .phi { font-size: 1.8rem; opacity: 0.35; }
+  .ph .phl { opacity: 0.65; line-height: 1.4; padding: 0 8px; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #0a0a0a 0%, #1a0d30 50%, #0a0a0a 100%);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px 24px 40px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '🦁';
+    position: absolute;
+    font-size: 500px; opacity: 0.03;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(212,160,23,0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 700px; }
+  .hero-eyebrow {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem; color: var(--muted);
+    letter-spacing: 3px; margin-bottom: 8px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 15vw, 8rem);
+    font-weight: 900; letter-spacing: 8px; line-height: 1;
+    background: linear-gradient(135deg, var(--gold-dim) 0%, var(--gold) 25%, var(--gold-light) 50%, var(--gold) 75%, var(--gold-dim) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 20px rgba(212,160,23,0.3));
+    margin-bottom: 10px;
+  }
+  .hero-subtitle {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    color: var(--green-light);
+    letter-spacing: 3px; margin-bottom: 16px;
+  }
+  .hero-tagline {
+    font-family: 'Caveat', cursive;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: var(--muted); line-height: 1.6;
+    max-width: 500px; margin: 0 auto 24px;
+  }
+
+  /* hero photo trio */
+  .hero-photos {
+    display: flex; gap: 12px;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 24px auto 28px;
+    max-width: 500px;
+  }
+  .hero-photo {
+    border-radius: 12px; overflow: hidden;
+    flex-shrink: 0;
+  }
+  .hero-photo:nth-child(1) { width: 120px; height: 155px; border: 3px solid var(--green); }
+  .hero-photo:nth-child(2) { width: 160px; height: 200px; border: 4px solid var(--gold); box-shadow: 0 0 30px rgba(212,160,23,0.3); }
+  .hero-photo:nth-child(3) { width: 120px; height: 155px; border: 3px solid var(--green); }
+
+  .hero-badges {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 8px;
+  }
+  .badge {
+    font-size: 0.7rem; font-weight: 900;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 20px;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.65);
+  }
+  .badge.gb { border-color: var(--green); color: var(--green-light); }
+
+  .scroll-hint {
+    margin-top: 32px;
+    font-family: 'Caveat', cursive;
+    font-size: 1rem; color: rgba(255,255,255,0.3);
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+  .section-sm { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
+
+  /* chapter header */
+  .chapter-header {
+    margin-bottom: 28px;
+  }
+  .chapter-num {
+    font-family: 'Bangers', cursive;
+    font-size: 0.72rem; letter-spacing: 4px;
+    color: var(--green-light);
+    margin-bottom: 6px;
+  }
+  .chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    font-weight: 900; line-height: 1.1;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold), var(--gold-light), var(--gold), var(--gold-dim));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .chapter-rule {
+    height: 2px; margin-top: 10px;
+    background: linear-gradient(90deg, var(--gold), var(--green), transparent);
+  }
+
+  /* body prose */
+  .prose {
+    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    line-height: 1.9; color: var(--body-text);
+    margin-bottom: 20px;
+  }
+  .prose strong { color: var(--gold-light); }
+  .prose em { color: var(--green-light); font-style: italic; font-weight: 800; }
+
+  /* callout box */
+  .callout {
+    border-radius: 14px; padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .callout.gold { background: #1c1800; box-shadow: inset 0 0 0 1.5px rgba(212,160,23,0.35); }
+  .callout.green { background: var(--green-pale); box-shadow: inset 0 0 0 1.5px rgba(58,154,74,0.35); }
+  .callout.dark { background: var(--black-card); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.08); border-left: 4px solid var(--gold); }
+  .callout p { font-size: 0.9rem; line-height: 1.78; color: var(--body-text); margin-bottom: 10px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout p strong { color: var(--gold-light); }
+  .callout p em { color: var(--green-light); font-style: italic; }
+  .callout-title {
+    font-family: 'Bangers', cursive;
+    font-size: 0.75rem; letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .callout.gold .callout-title { color: var(--gold-light); }
+  .callout.green .callout-title { color: var(--green-light); }
+  .callout.dark .callout-title { color: var(--gold-light); }
+
+  /* fact pill */
+  .fact-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--black-soft);
+    border: 1.5px solid rgba(212,160,23,0.2);
+    border-radius: 8px; padding: 7px 12px;
+    font-size: 0.78rem; font-weight: 800;
+    color: var(--body-text); margin: 4px;
+  }
+  .fact-pill.gp { border-color: rgba(58,154,74,0.3); }
+  .fact-pill span { color: var(--gold-light); }
+  .fact-pill.gp span { color: var(--green-light); }
+  .pills-wrap { display: flex; flex-wrap: wrap; margin: -4px; }
+
+  /* quote block */
+  .quote-block {
+    border-left: 4px solid var(--gold);
+    padding: 16px 24px;
+    margin: 24px 0;
+    background: var(--black-card);
+    border-radius: 0 12px 12px 0;
+  }
+  .quote-block .qt {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+    font-style: italic;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold), var(--gold-light), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.4; margin-bottom: 8px;
+  }
+  .quote-block .qa {
+    font-size: 0.75rem; color: var(--muted);
+    font-weight: 700; letter-spacing: 1px;
+  }
+
+  /* photo layouts */
+  .photo-2 {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; margin: 24px 0;
+  }
+  .photo-3 {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 10px; margin: 24px 0;
+  }
+  .photo-4 {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 10px; margin: 24px 0;
+  }
+  .photo-wide { width: 100%; margin: 24px 0; }
+
+  .p-frame {
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .p-frame.gold-f { border: 2.5px solid var(--gold); }
+  .p-frame.green-f { border: 2.5px solid var(--green); }
+  .p-frame.white-f { border: 2px solid rgba(255,255,255,0.12); }
+
+  .p-frame.h160 { height: 160px; }
+  .p-frame.h200 { height: 200px; }
+  .p-frame.h240 { height: 240px; }
+  .p-frame.h280 { height: 280px; }
+  .p-frame.h320 { height: 320px; }
+
+  /* menu */
+  .menu-card {
+    background: var(--black-card);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1.5px rgba(212,160,23,0.2);
+    margin: 24px 0;
+  }
+  .menu-header {
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-light), var(--gold), var(--gold-dim));
+    padding: 12px 20px;
+    font-family: 'Bangers', cursive;
+    font-size: 1.1rem; letter-spacing: 3px;
+    color: var(--black); text-align: center;
+  }
+  .menu-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .menu-item:last-child { border-bottom: none; }
+  .mi-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+  .mi-text h4 { font-weight: 900; color: var(--gold-light); font-size: 0.95rem; margin-bottom: 3px; }
+  .mi-text p { font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+
+  /* countdown stats */
+  .stats-row {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 10px; margin: 24px 0;
+  }
+  .stat-card {
+    background: var(--black-card);
+    border-radius: 10px; padding: 16px 12px;
+    text-align: center;
+    box-shadow: inset 0 0 0 1.5px rgba(212,160,23,0.15);
+  }
+  .stat-num {
+    font-family: 'Bangers', cursive;
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block; line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.65rem; font-weight: 800;
+    color: var(--muted); letter-spacing: 1px;
+    text-transform: uppercase; margin-top: 4px;
+    display: block;
+  }
+
+  /* animal roster */
+  .animal-roster {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; margin: 24px 0;
+  }
+  .animal-card {
+    background: var(--black-card);
+    border-radius: 12px; padding: 16px;
+    box-shadow: inset 0 0 0 1.5px rgba(212,160,23,0.2);
+  }
+  .animal-card .ac-name {
+    font-family: 'Bangers', cursive;
+    font-size: 1.1rem; letter-spacing: 2px;
+    margin-bottom: 6px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .animal-card p { font-size: 0.82rem; line-height: 1.65; color: var(--body-text); }
+  .animal-card p strong { color: var(--gold-light); }
+  .animal-card p em { color: var(--green-light); }
+
+  /* grandparents section */
+  .gp-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; margin: 24px 0;
+  }
+  .gp-card {
+    border-radius: 12px; padding: 16px;
+  }
+  .gp-card.betty  { background: #1c1800; box-shadow: inset 0 0 0 1.5px rgba(212,160,23,0.35); }
+  .gp-card.irene  { background: #0a0f1e; box-shadow: inset 0 0 0 1.5px rgba(64,96,160,0.4); }
+  .gp-card .gp-name {
+    font-family: 'Bangers', cursive;
+    font-size: 0.9rem; letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .gp-card.betty .gp-name {
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gp-card.irene .gp-name { color: #7090d0; }
+  .gp-item {
+    display: flex; align-items: flex-start; gap: 8px;
+    margin-bottom: 8px;
+  }
+  .gp-item:last-child { margin-bottom: 0; }
+  .gp-item .gi-icon { font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+  .gp-item .gi-text { font-size: 0.8rem; line-height: 1.55; color: var(--body-text); font-weight: 700; }
+  .gp-item .gi-text span { color: var(--gold-light); }
+
+  /* durwood memorial */
+  .durwood-memorial {
+    background: var(--black-soft);
+    border-left: 5px solid var(--gold);
+    border-radius: 0 14px 14px 0;
+    padding: 20px 24px;
+    margin: 24px 0;
+    position: relative; overflow: hidden;
+    box-shadow: 0 0 30px rgba(212,160,23,0.05);
+  }
+  .durwood-memorial::after {
+    content: '🎩';
+    position: absolute; right: 20px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.5rem; opacity: 0.08;
+  }
+  .durwood-memorial .dm-title {
+    font-family: 'Bangers', cursive;
+    font-size: 0.9rem; letter-spacing: 2px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .durwood-memorial p { font-size: 0.88rem; line-height: 1.8; color: var(--body-text); margin-bottom: 10px; }
+  .durwood-memorial p:last-child { margin-bottom: 0; }
+  .durwood-memorial p strong { color: var(--gold-light); }
+  .durwood-memorial p em { color: var(--muted); font-style: italic; }
+
+  /* grandma betty big quote */
+  .betty-quote-section {
+    background: linear-gradient(160deg, #0a0a0a, #1c1800, #0a0a0a);
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .betty-quote-section .bq-from {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem; color: rgba(212,160,23,0.6);
+    letter-spacing: 2px; margin-bottom: 12px;
+  }
+  .betty-quote-section .bq-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    font-style: italic;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold), var(--gold-light), var(--gold), var(--gold-dim));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 20px rgba(212,160,23,0.2));
+    line-height: 1.3; max-width: 600px; margin: 0 auto;
+  }
+  .betty-quote-section .bq-attr {
+    font-size: 0.78rem; color: var(--muted);
+    margin-top: 14px; font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  /* closing love letter */
+  .closing-section {
+    background: linear-gradient(160deg, #0a0a0a, var(--green-pale), #0a0a0a);
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .closing-section .cs-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 900;
+    color: var(--green-light);
+    margin-bottom: 24px;
+  }
+  .closing-section .cs-body {
+    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    line-height: 1.95; color: var(--body-text);
+    max-width: 640px; margin: 0 auto 24px;
+  }
+  .closing-section .cs-body strong { color: var(--green-light); }
+  .closing-section .cs-body em { color: var(--gold-light); font-style: italic; }
+  .closing-rule {
+    font-family: 'Caveat', cursive;
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    color: var(--gold-light);
+    margin-top: 20px;
+  }
+  .closing-emojis {
+    font-size: 1.8rem; letter-spacing: 4px;
+    margin-top: 16px; display: block;
+  }
+
+  /* footer */
+  .footer {
+    background: var(--black);
+    padding: 20px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer p { font-size: 0.72rem; color: var(--muted); font-weight: 700; letter-spacing: 1px; }
+
+  /* section divider */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--green), var(--gold), transparent);
+    margin: 0 24px;
+  }
+
+  /* mobile */
+  @media (max-width: 600px) {
+    .photo-2, .photo-3, .photo-4 { grid-template-columns: 1fr 1fr; }
+    .stats-row { grid-template-columns: repeat(2,1fr); }
+    .animal-roster, .gp-grid { grid-template-columns: 1fr; }
+    .hero-photos { gap: 8px; }
+    .hero-photo:nth-child(1) { width: 90px; height: 118px; }
+    .hero-photo:nth-child(2) { width: 120px; height: 155px; }
+    .hero-photo:nth-child(3) { width: 90px; height: 118px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shine-bar"></div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">A Class of 2026 Tribute</div>
+    <h1>ZACHARY</h1>
+    <div class="hero-subtitle">The Legend of Zack Attack</div>
+    <div class="hero-tagline">
+      A completely true &amp; totally accurate account of how one kid survived
+      eighteen years, four agonizing years of high school, one Florida sun,
+      one very bad boat trip, and came out the other side with a diploma,
+      a 100-pound dog, a rabbit named Carrots, and absolutely zero plans
+      to ever sit in a classroom again.
+    </div>
+
+    <div class="hero-photos">
+      <div class="hero-photo">
+        <div class="ph"><span class="phi">👶</span><span class="phl">Baby Zachy</span></div>
+      </div>
+      <div class="hero-photo">
+        <div class="ph"><span class="phi">🎓</span><span class="phl">Grad Cap Photo</span></div>
+      </div>
+      <div class="hero-photo">
+        <div class="ph"><span class="phi">🤵</span><span class="phl">Senior Portrait</span></div>
+      </div>
+    </div>
+
+    <div class="hero-badges">
+      <span class="badge">🎓 Class of 2026</span>
+      <span class="badge gb">🐶 Jazzy's Best Friend</span>
+      <span class="badge">⚡ Future Electrician</span>
+      <span class="badge gb">🌨️ Snow Chaser</span>
+      <span class="badge">🐰 Carrots' Roommate</span>
+      <span class="badge gb">🦁 Born in August</span>
+    </div>
+
+    <div class="scroll-hint">↓ scroll for the full story ↓</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 1 — THE BEGINNING ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER ONE</div>
+    <div class="chapter-title">In the Beginning, There Was The Face 😏</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="photo-2">
+    <div class="p-frame gold-f h240">
+      <div class="ph"><span class="phi">👶</span><span class="phl">Baby Zachy — Day One</span></div>
+    </div>
+    <div class="p-frame green-f h240">
+      <div class="ph"><span class="phi">😛</span><span class="phl">The Tongue Photo — Baby Zachy</span></div>
+    </div>
+  </div>
+
+  <div class="prose">
+    Once upon a time, on a warm August day in Florida — air thick enough to chew, sun with absolutely no chill — a tiny human arrived with dark hair, big eyes, and an expression that said: <strong>"I have assessed this situation and I have thoughts."</strong>
+  </div>
+  <div class="prose">
+    His name was Zachary. You could call him Zachy. Or Zack Attack. Or Zachariah — if you wanted him to slowly rotate his entire head toward you like an owl who has just been deeply, personally offended.
+  </div>
+  <div class="prose">
+    He is not sarcastic. Let's be clear about that. He is <strong>honest.</strong> He will tell you exactly how he feels, express every grievance with complete clarity, and then show up and <em>help you anyway.</em> Every single time. That is the Zachy way. That has always been the Zachy way.
+  </div>
+  <div class="prose">
+    And underneath all of it — underneath The Face and the honesty and the eye rolls — there is a smile so warm, so genuinely lit from within, that when it shows up it <strong>stops a room in its tracks.</strong> Not sometimes. Every time. Still does. Always will.
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-title">💛 ENDEARING FACT № 1</div>
+    <p>Zachy's smile can light up any room he walks into. He doesn't deploy it constantly — which is exactly what makes it so powerful. When it shows up for real, something shifts in the atmosphere and everyone in the vicinity feels it. The family just calls it Tuesday.</p>
+  </div>
+
+  <div class="photo-3">
+    <div class="p-frame green-f h160">
+      <div class="ph"><span class="phi">📸</span><span class="phl">Little Zachy — Age 5</span></div>
+    </div>
+    <div class="p-frame gold-f h160">
+      <div class="ph"><span class="phi">📸</span><span class="phl">With Family — Early Years</span></div>
+    </div>
+    <div class="p-frame green-f h160">
+      <div class="ph"><span class="phi">📸</span><span class="phl">Little Zachy — Age 8</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 2 — ANIMALS ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER TWO</div>
+    <div class="chapter-title">The Animals Who Own His Whole Heart 🐶🐰</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="prose">
+    Before we go any further, there is something you need to know. Something that reframes everything about Zachy's cool, unbothered exterior.
+  </div>
+
+  <div class="photo-2">
+    <div class="p-frame gold-f h240">
+      <div class="ph"><span class="phi">🐶</span><span class="phl">Jazzy — 100 lbs of fluff</span></div>
+    </div>
+    <div class="p-frame green-f h240">
+      <div class="ph"><span class="phi">🐶</span><span class="phl">Zachy wrestling Jazzy on the floor</span></div>
+    </div>
+  </div>
+
+  <div class="animal-roster">
+    <div class="animal-card">
+      <div class="ac-name">🐶 JAZZY</div>
+      <p>10 years old. Great Pyrenees × Bernese Mountain Dog. <strong>100 pounds of pure fluff.</strong> Built by nature for cold snowy mountains. Living in Florida. Dreaming of snow — just like her best friend. The floor wrestling matches between her and Zachy are full contact, fully committed, and completely mutual. <em>Spirit animal status: confirmed.</em></p>
+    </div>
+    <div class="animal-card">
+      <div class="ac-name">🐰 CARROTS</div>
+      <p>Age unknown. Regular-sized rabbit. Named Carrots. <strong>Sits in the corner.</strong> Watches the wrestling matches between Zachy and Jazzy. Has seen some things. Tells absolutely no one what he has witnessed. <em>A creature of quiet dignity and zero opinions.</em></p>
+    </div>
+  </div>
+
+  <div class="callout green">
+    <div class="callout-title">💚 ENDEARING FACT № 2</div>
+    <p>Jazzy's breed was literally designed by nature for cold snowy mountains. Zachy has spent 18 years in Florida dreaming of snow. Jazzy has spent 10 years in Florida dreaming of snow. <strong>They found each other. It was fate.</strong> Two snow-loving souls trapped in the sunshine state together, and their bond is absolutely unbreakable. When Zachy finally sees snow, Jazzy needs to be there. This is not optional. This is destiny.</p>
+  </div>
+
+  <div class="prose">
+    And yes — the same boy who will look you in the eye and tell you exactly what he thinks with zero sugarcoating gets on the floor and <strong>rolls around with a 100-pound mountain dog</strong> like it's the most natural thing in the world. Because for Zachy, it is.
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 3 — FOOD ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER THREE</div>
+    <div class="chapter-title">The Sacred Food Pyramid of Zachary 🌮🥤</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="prose">
+    Every great civilization is built on something. Egypt had pyramids. Rome had the Colosseum. <strong>Zachy has a food list</strong> — just as carefully constructed, just as deeply respected, and just as thoroughly non-negotiable as any wonder of the ancient world.
+  </div>
+
+  <div class="p-frame gold-f h200 photo-wide">
+    <div class="ph"><span class="phi">🍗</span><span class="phl">Zachy eating chicken strips — the younger years</span></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="menu-header">🍽️ THE OFFICIAL ZACHY MENU — EST. 2008 — STRICTLY NON-NEGOTIABLE</div>
+    <div class="menu-item">
+      <div class="mi-icon">🌮</div>
+      <div class="mi-text">
+        <h4>Doritos Locos Taco MEAL at Taco Bell</h4>
+        <p>Not just the taco. THE MEAL. The full experience. If you order just the taco you have missed the entire point and Zachy will look at you with those eyes and you will feel it in your soul for three business days.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🥤</div>
+      <div class="mi-text">
+        <h4>Baja Blast Mountain Dew — Taco Bell Exclusive Only</h4>
+        <p>That specific shade of teal. That specific flavor scientists cannot fully explain. Regular Mountain Dew is not in the conversation. Do not bring it up. Just order the Baja Blast and move on with your life.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🌶️</div>
+      <div class="mi-text">
+        <h4>Hot Sauce — On Everything. And We Mean Everything.</h4>
+        <p>Mac n cheese? Hot sauce. Chicken strips? Hot sauce. Pop Tarts? We're not saying he has. We're not saying he hasn't. The bottle is always within arm's reach. We stopped asking questions years ago.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🧀</div>
+      <div class="mi-text">
+        <h4>Mac N Cheese — A Lifestyle, Not Just a Food</h4>
+        <p>Consistent. Reliable. Never disappointing. Mac n cheese has never let Zachy down. Zachy has never let mac n cheese down. It is one of the great love stories of our time.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🍗</div>
+      <div class="mi-text">
+        <h4>Chicken Strips &amp; French Fries — The Founding Fathers</h4>
+        <p>Present since the beginning. Will be present at the end. Loyal. Consistent. More reliable than most people, honestly, and we mean that with full respect to everyone in this room.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🥔</div>
+      <div class="mi-text">
+        <h4>All Dressed Lays — The Sophisticated Choice</h4>
+        <p>Sweet. Salty. Tangy. Spicy. All five taste sensations simultaneously. While others eat plain chips like absolute amateurs, Zachy is experiencing the full spectrum of human flavor in a single handful. Cultured. Refined. Covered in chip dust. Iconic.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🍬</div>
+      <div class="mi-text">
+        <h4>ALL Sour Candy — Every Single One Without Exception</h4>
+        <p>Not some. ALL of them. The ones that remove a layer of tongue. The ones chemists created as a dare. Zachy eats them all with the completely calm expression of someone who has simply evolved beyond the rest of us. It is humbling to witness.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🍡</div>
+      <div class="mi-text">
+        <h4>Pop Tarts — The Breakfast of Champions</h4>
+        <p>Non-negotiable. Present at all times, for all meals, in all situations. Toasted or untoasted — that is between Zachy and God. We do not ask. We do not question. We simply respect the Pop Tart and move on.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout dark">
+    <div class="callout-title">⚠️ OFFICIAL DISCLAIMER</div>
+    <p>Nobody has ever successfully convinced Zachy to "just try something new from the menu." One family member attempted this in 2019. They still think about it sometimes. Please order your own food and allow the man to eat his chicken strips in peace. Thank you for your understanding and cooperation.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 4 — OUTDOORS ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER FOUR</div>
+    <div class="chapter-title">The Great Outdoors: It's Complicated ☀️🚤</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="prose">
+    Zachy is a Florida boy. Born and raised in the land of relentless sunshine, humidity you can physically chew, and weather classified as <strong>"the surface of the sun but with better restaurants."</strong> And he has looked at all of it and said, with complete composure: <em>"I'm good. I'll be inside."</em>
+  </div>
+  <div class="prose">
+    Now — don't misread this. Zachy and the outdoors have a relationship. It's just entirely on his terms.
+  </div>
+  <div class="prose">
+    He'll wade into a river and pick up rocks the size of a golden retriever. He'll float down a stream in a <strong>bright pink inflatable tube</strong> with the confidence of a man who has genuinely zero concerns about anyone's opinion of him — a level of self-assurance most adults never reach. He'll play basketball in the neighborhood until it is so dark he cannot see the basket. He'll ride a mountain coaster through the trees with a face that says <em>"I am completely calm and not even a little bit exhilarated right now do not look at me."</em>
+  </div>
+
+  <div class="photo-3">
+    <div class="p-frame green-f h200">
+      <div class="ph"><span class="phi">🛟</span><span class="phl">Pink Tube — Helen Georgia River</span></div>
+    </div>
+    <div class="p-frame gold-f h200">
+      <div class="ph"><span class="phi">🪨</span><span class="phl">River Wading — Rock the Size of a Golden Retriever</span></div>
+    </div>
+    <div class="p-frame green-f h200">
+      <div class="ph"><span class="phi">🎢</span><span class="phl">Georgia Mountain Coaster — With Dad</span></div>
+    </div>
+  </div>
+
+  <div class="prose">
+    These things are pre-approved. These are on the list. <strong>The boat, however, is a different story entirely.</strong>
+  </div>
+
+  <div class="callout dark">
+    <div class="callout-title">🚤 THE BOAT INCIDENT — AS IT ACTUALLY HAPPENED</div>
+    <p>Zachy went on the boat. He gave it a real, honest shot. He was out there on the water with Dad Chris, Brother Christopher, and Uncle Oliver. And he <strong>hated every single second of it.</strong></p>
+    <p>Now — to this day — if you mention the word boat anywhere in his vicinity, he gives you that look. You know the one. <em>Uh-uh. No way. Absolutely not.</em> Not a full sentence. Not an explanation. Just those four words and a look that closes the conversation permanently. The man tried it. The man decided. We respect the decision.</p>
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-title">🚗 THE DRIVING SITUATION</div>
+    <p>Zachy also tried driving. In a parking lot. With family there for moral support. He idle-rolled forward a little. Then stopped. Then idle-rolled forward a little more. Then stopped. Repeated this several times. <strong>Never left the parking lot. Never approached anything resembling actual speed.</strong> Looked at Florida traffic waiting outside. Retired from driving immediately. Honestly? Have you SEEN Florida drivers? <em>He made the right call.</em></p>
+  </div>
+
+  <div class="callout green">
+    <div class="callout-title">🎮 THE VR HEADSET — A LIFESTYLE CHOICE</div>
+    <p>The VR headset is not an escape. It is a <strong>better reality,</strong> carefully selected. While you're out here in regular reality dealing with regular reality problems — boats, Florida traffic, the sun — Zachy has selected an upgraded version and is thriving in it. <strong>Respect the vision. Respect the headset.</strong></p>
+    <p>And if you're ever in the house and you hear what sounds like a young man having a very specific, very personal disagreement with a stranger from three states away — do not be alarmed. He is simply playing his video game. The same kid who barely raises his voice in regular conversation will, with full chest and zero hesitation, deliver a <strong>complete verbal performance review to a pixel-rendered stranger.</strong> It is, honestly, art.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 5 — HELEN GEORGIA ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER FIVE</div>
+    <div class="chapter-title">Helen, Georgia — His 14th Birthday Trip 🏔️🌊</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="prose">
+    For Zachy's 14th birthday, the family headed to Helen, Georgia — a little mountain river town — and what happened on that trip became the kind of story this family is still telling years later.
+  </div>
+
+  <div class="photo-4">
+    <div class="p-frame gold-f h160">
+      <div class="ph"><span class="phi">🛟</span><span class="phl">Zachy &amp; Miki on the river</span></div>
+    </div>
+    <div class="p-frame green-f h160">
+      <div class="ph"><span class="phi">🌊</span><span class="phl">The river journey — Helen GA</span></div>
+    </div>
+    <div class="p-frame gold-f h160">
+      <div class="ph"><span class="phi">🏔️</span><span class="phl">Birthday celebration by the water</span></div>
+    </div>
+    <div class="p-frame green-f h160">
+      <div class="ph"><span class="phi">🎂</span><span class="phl">14th Birthday — the cake moment</span></div>
+    </div>
+  </div>
+
+  <div class="prose">
+    Before any adult had even gotten their feet wet, Zachy and his cousin Miki — partners in crime since forever — had already launched themselves into the river and floated the <strong>entire thing by themselves.</strong> Just two kids who saw a river and said let's go. Nobody told them to wait. Nobody could have stopped them if they tried.
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-title">🏔️ THE MOMENT EVERYONE REMEMBERS</div>
+    <p>Papa Mike wanted to cross the river. The water was moving. It was a real crossing. And Zachy — 14 years old — and Miki — 12 years old — each picked up a stick and flanked him on both sides.</p>
+    <p>They hyped him up. They cheered him on. They <strong>refused to leave his side</strong> until he made it across. Both of them there, sticks in hand, one on each side of Papa Mike, making sure he knew he could do it.</p>
+    <p><strong>Papa crossed that river.</strong> And he was so proud — of himself, and of those two kids who never once left his side. That moment right there is Zachy in one perfect picture. Fourteen years old, stick in hand, <em>not going anywhere until the person he loves makes it to the other side.</em></p>
+  </div>
+
+  <div class="prose">
+    Miki — Mikayla, 17, Zachy's cousin and co-conspirator — has been causing perfectly good trouble alongside Zachy for years. The kind of trouble that makes adults nervous in the moment and proud in retrospect. <strong>Helen Georgia was their finest work.</strong>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 6 — HIGH SCHOOL ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER SIX</div>
+    <div class="chapter-title">High School: The Longest Four Years in Recorded History 🎓😩</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="photo-2">
+    <div class="p-frame gold-f h240">
+      <div class="ph"><span class="phi">😂</span><span class="phl">14th Birthday — laughing at the cake</span></div>
+    </div>
+    <div class="p-frame green-f h240">
+      <div class="ph"><span class="phi">💪</span><span class="phl">Zachy in the weight room</span></div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <div class="qt">"I just want to graduate."</div>
+    <div class="qa">— Zachary · every single morning · September 2022 — May 2026 · approximately 1,367 times · without once losing conviction</div>
+  </div>
+
+  <div class="prose">
+    Not <em>"I want to find myself."</em> Not <em>"these will be the best years of my life."</em> Just that. Said with complete clarity. Said with complete purpose. Said every single morning for four straight years.
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="stat-num">4</span>
+      <span class="stat-label">Years Survived</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">720</span>
+      <span class="stat-label">Days He Showed Up</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">1</span>
+      <span class="stat-label">Goal The Whole Time</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Plans To Ever Return</span>
+    </div>
+  </div>
+
+  <div class="prose">
+    And here is the part of this chapter that the rest of the world doesn't see.
+  </div>
+
+  <div class="callout dark">
+    <div class="callout-title">✦ THE STORY UNDERNEATH THE STORY</div>
+    <p>Zachy didn't get to do high school on easy mode. He did it while quietly managing real health challenges — hard days, appointments, days where just standing up and walking through those school doors took more out of him than anyone watching would ever guess. He never made it the headline. He never used it as an excuse. <strong>He just kept going.</strong></p>
+    <p>That is why <em>"I just want to graduate"</em> wasn't a complaint. It was a promise to himself. And on May 30th, 2026 — <strong>he kept it.</strong></p>
+  </div>
+
+  <div class="prose">
+    He did find a few things worth his time. The weight room, for one. Zachy took weightlifting and quietly, methodically, with zero fanfare, became someone you genuinely do not want to arm wrestle. The weight room was his. He owned it. The barbells have not fully recovered.
+  </div>
+
+  <div class="callout green">
+    <div class="callout-title">🏆 FACT № 5</div>
+    <p>Showing up every single day to something you don't want to do, for four consecutive years, while quietly carrying things most people never had to carry, without quitting — is not just surviving high school. It is <strong>discipline. It is character. It is grit.</strong> Zachy has it in enormous quantities and will never once brag about it — so we're bragging for him. Right now. In front of everyone. You're welcome, Zachy.</p>
+  </div>
+
+  <div class="photo-2">
+    <div class="p-frame gold-f h200">
+      <div class="ph"><span class="phi">🎓</span><span class="phl">Grad Cap &amp; Gown — May 30, 2026</span></div>
+    </div>
+    <div class="p-frame green-f h200">
+      <div class="ph"><span class="phi">📜</span><span class="phl">Diploma moment</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 7 — THE BOY UNDERNEATH ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER SEVEN</div>
+    <div class="chapter-title">The Boy Who Makes Everyone Feel Seen ❤️</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="p-frame gold-f h280 photo-wide">
+    <div class="ph"><span class="phi">🤗</span><span class="phl">The legendary Zachy hug — Mom &amp; Zachy</span></div>
+  </div>
+
+  <div class="prose">
+    Here is the part of the story that doesn't get told enough. The part that lives underneath all the other parts.
+  </div>
+  <div class="prose">
+    Zachy <strong>always makes time for you.</strong> Always. No matter how unbothered he appears. No matter how deep into a VR headset he currently is. No matter how aggressively he does not want to be on a boat. If you need him — <em>he shows up.</em>
+  </div>
+  <div class="prose">
+    He makes you feel seen. He makes you feel like you matter. He makes you feel completely and totally loved without ever announcing that he's doing it. Need help moving something heavy? He's there. Need someone to listen? He's there. Need a ride, a favor, a body in the passenger seat? <strong>He's already getting his shoes on.</strong> He won't make a thing of it. He won't bring it up later. He won't keep score. That's not how Zachy is built.
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-title">🍬 THE RAIN STORY</div>
+    <p>One Halloween, Grandma Betty was outside passing out candy. It started raining. Zachy came out and <strong>sat with her in the rain</strong> to help pass out candy — because he said he didn't want her to be alone out there. That's it. No big announcement. No asking for credit. Just Zachy, in the rain, next to his grandma, <em>because that's where she was.</em></p>
+  </div>
+
+  <div class="prose">
+    And then — if you're very lucky — he gives you one of those hugs. <strong>Full commitment. Both arms. Real duration.</strong> No asterisks, no holding back. The kind where something in your chest just quietly settles. The kind where you can feel his love for you through it. That's not a figure of speech. You actually can. Grandma Betty can tell you. She's been collecting them for 18 years.
+  </div>
+
+  <div class="callout green">
+    <div class="callout-title">💚 ENDEARING FACT № 6</div>
+    <p>Zachy's smile lights up every room he walks into. He also has a way of making every person he talks to feel like the most important person in the room. Not because he tries. Not because he performs it. <strong>Just because that's genuinely, quietly, beautifully who he is.</strong> The honesty and the eye rolls are just the wrapping paper. This is the gift.</p>
+  </div>
+
+  <div class="photo-3">
+    <div class="p-frame gold-f h180">
+      <div class="ph"><span class="phi">👪</span><span class="phl">Family group photo</span></div>
+    </div>
+    <div class="p-frame green-f h180">
+      <div class="ph"><span class="phi">🤗</span><span class="phl">Zachy hugging — younger years</span></div>
+    </div>
+    <div class="p-frame gold-f h180">
+      <div class="ph"><span class="phi">😊</span><span class="phl">That smile — the one that stops rooms</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 8 — THE STORIES ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER EIGHT</div>
+    <div class="chapter-title">Two Stories the Family Will Never Stop Telling 📖😂</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="callout dark">
+    <div class="callout-title">📖 STORY № 1 — CEDAR KEY, FLORIDA: THE CEILING FAN INCIDENT</div>
+    <p>The family went to Cedar Key for a weekend trip. Nothing fancy — just the gulf, the quiet, and a rental house with, critically, a ceiling fan.</p>
+    <p>Nobody can fully reconstruct the physics of what happened next. There was Zachy — somewhere around twelve or fourteen years old. There was a pair of underwear. There was the ceiling fan. There was, presumably, some sort of throwing motion. And then there was Zachy's underwear — <strong>fully airborne, fully launched, and fully stuck on the ceiling fan.</strong> Just up there. Hanging out. New permanent resident of the rental house.</p>
+    <p>The family will tell you the story slightly differently every time. The blades were spinning. The blades were stopped. Zachy was laughing. Zachy was mortified. <em>It is impossible to determine which version is true</em> because everyone present was crying with laughter and no court would accept their testimony.</p>
+    <p>The underwear came down eventually. <strong>The story has not.</strong></p>
+  </div>
+
+  <div class="callout green">
+    <div class="callout-title">📖 STORY № 2 — THE BACK PORCH SLIP AND SLIDE</div>
+    <p>It was one of those Florida afternoons where the sky just opens — wind, sideways rain, the kind of storm that sends most kids inside to complain about the wifi.</p>
+    <p>Not Zachy and his cousin JonJon.</p>
+    <p>They looked out at the soaking back porch and saw, with full clarity, <strong>an opportunity.</strong> A tarp. Some soap. Whatever hose situation they could improvise. The storm itself providing free water pressure from above. And just like that — the entire back porch became a fully homemade, fully soaped-up, <strong>completely working slip and slide.</strong></p>
+    <p>They had the time of their lives. The porch survived. Nobody got hurt. The parents had concerns. Zachy and JonJon had <em>a perfect day,</em> made entirely out of a day that was supposedly ruined.</p>
+    <p>Engineering school missed out. <strong>The future electrician started early.</strong></p>
+  </div>
+
+  <div class="prose" style="text-align:center; font-style:italic; color: var(--muted);">
+    There are more. There are always more. Ask any family member here today.
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 9 — THE FAMILY ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER NINE</div>
+    <div class="chapter-title">The People Who Love Him 💛💙🎩</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="gp-grid">
+    <div class="gp-card betty">
+      <div class="gp-name">💛 Grandma Betty &amp; Papa Mike</div>
+      <div class="gp-item">
+        <div class="gi-icon">🍬</div>
+        <div class="gi-text">Sat with Grandma Betty in the <span>rain</span> on Halloween to pass out candy — because he said he didn't want her to be alone out there.</div>
+      </div>
+      <div class="gp-item">
+        <div class="gi-icon">⚖️</div>
+        <div class="gi-text">Never once took sides between Grandma Betty and Papa Mike. <span>Even when Grandma really, really, genuinely wanted him to.</span> 😄 He loved them both equally and wouldn't budge.</div>
+      </div>
+      <div class="gp-item">
+        <div class="gi-icon">💪</div>
+        <div class="gi-text">Stood up to big brother Christopher — <span>twice his size</span> — when it mattered. Did it anyway. No hesitation.</div>
+      </div>
+      <div class="gp-item">
+        <div class="gi-icon">🔮</div>
+        <div class="gi-text">Grandma Betty's vision for Zachy: <span>a doting wife who loves him completely, a job he enjoys,</span> and one or two children who will be very, very lucky.</div>
+      </div>
+    </div>
+
+    <div class="gp-card irene">
+      <div class="gp-name">💙 Grandma Irene</div>
+      <div class="gp-item">
+        <div class="gi-icon">🏅</div>
+        <div class="gi-text">Has been at <span>every single game, every single event</span> — basketball, baseball, all of it — for all her grandchildren. Never missed one. Not once.</div>
+      </div>
+      <div class="gp-item">
+        <div class="gi-icon">💙</div>
+        <div class="gi-text">Sweet. Dedicated. Always there. A grandmother who has given her <span>whole heart</span> to her family every single day and never asked for anything in return.</div>
+      </div>
+      <div class="gp-item">
+        <div class="gi-icon">🤗</div>
+        <div class="gi-text">Says his hugs are something <span>truly, genuinely special.</span> She would know — she has been collecting them for 18 years and she is absolutely right.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="durwood-memorial">
+    <div class="dm-title">🎩 In Loving Memory — Grandpa Durwood</div>
+    <p>
+      Durwood was the <strong>steady figure.</strong> The quiet one. The strong one. The kind of man whose presence made everything feel solid and safe without him ever needing to say a word about it. He built a family of six children and showed up for every single one of them — and for every grandchild too. He was simply <em>always there.</em>
+    </p>
+    <p>
+      Off the bowling lanes he was just as steady — but ask anyone who spent time with him, and they'll tell you: Durwood knew how to have fun. He once put a St. Patrick's Day hat on his head mid-game and <strong>bowled the entire rest of the game with it on</strong> without offering a single word of explanation. Just Durwood. Hat on his head. Completely at peace. Quiet joy. No performance needed. That was him in one perfect moment.
+    </p>
+    <p>
+      He passed away suddenly when Zachy was still young — but the love he poured into this family lives on in every person in this room today. <strong>He is here in spirit, watching Zachy cross this finish line, and he is so incredibly proud.</strong> 🎩❤️
+    </p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ CH 10 — THE FUTURE ══════════ -->
+<div class="section">
+  <div class="chapter-header">
+    <div class="chapter-num">CHAPTER TEN</div>
+    <div class="chapter-title">The Future is Electric — And There Will Be Snow ⚡🌨️</div>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="photo-2">
+    <div class="p-frame gold-f h260">
+      <div class="ph"><span class="phi">🎓</span><span class="phl">Grad cap &amp; gown — the future electrician</span></div>
+    </div>
+    <div class="p-frame green-f h260">
+      <div class="ph"><span class="phi">⚡</span><span class="phl">Zachy — Class of 2026</span></div>
+    </div>
+  </div>
+
+  <div class="prose">
+    Having completed the singular, all-consuming, years-long mission of <em>just graduating</em> — Zachy has turned his energy toward what comes next. And what comes next is going to be <strong>electric.</strong> Literally.
+  </div>
+  <div class="prose">
+    Zachy is going to trade school to become an <strong>electrician.</strong> Take a moment to appreciate how perfectly, obviously right this is. This kid has had a spark since day one. A live-wire energy. The ability to light up every room he walks into — with that smile, with that presence, with that way of making people feel seen — whether he's trying to or not. <strong>He was always going to work with electricity. The electricity was always going to work with him. ⚡</strong>
+  </div>
+
+  <div class="callout dark">
+    <p>Somewhere in the near future, a version of Zachy is showing up to someone's house, fixing their entire electrical situation, delivering one perfectly timed completely honest comment about the state of their wiring, and leaving them with a five-star review, a referral to everyone they know, and the faint but persistent feeling that they've just been in the presence of someone genuinely special. <strong>This is the destiny. It is written. It is certain.</strong></p>
+  </div>
+
+  <div class="prose">
+    But Zachy has bigger plans too. He wants to <strong>travel.</strong> See the world. Go places Florida cannot provide. And most urgently, most importantly, most beautifully — this Florida boy who has never once needed a winter coat, who has a 100-pound snow dog literally built for the mountains —
+  </div>
+
+  <div class="quote-block">
+    <div class="qt">Wants to see snow.</div>
+    <div class="qa">Real snow. The kind that falls silently. The kind that covers everything white and quiet. The kind Jazzy was born knowing how to run through. The kind you can stick your tongue out to catch — and based on photographic evidence going all the way back to childhood, we know for a documented fact that sticking his tongue out has never once been a problem for this kid.</div>
+  </div>
+
+  <div class="callout green">
+    <div class="callout-title">❄️ FACT № 7</div>
+    <p>Jazzy is literally designed by nature for cold snowy mountains. Zachy has been dreaming of snow his whole life. <strong>When Zachy finally sees snow, Jazzy needs to be there. This is not optional. This is destiny. Someone make this happen.</strong> 🌨️🐶</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════ GRANDMA BETTY QUOTE ══════════ -->
+<div class="betty-quote-section">
+  <div class="bq-from">From Grandma Betty &amp; Papa Mike — eleven words that say everything:</div>
+  <div class="bq-text">"Just be yourself and have a good life."</div>
+  <div class="bq-attr">The best advice anyone has ever given. Short. Perfect. Exactly right. We couldn't have said it better if we tried.</div>
+</div>
+
+<!-- ══════════ CLOSING LOVE LETTER ══════════ -->
+<div class="closing-section">
+  <div class="section-sm">
+    <div class="cs-title">A Note to the Graduate — From Everyone Who Loves You</div>
+    <div class="cs-body">
+      Hey Zachy —<br><br>
+      You came into this world on an August day with The Face already fully loaded and a smile that could stop a room when you decided to use it.<br><br>
+      Eighteen years later — you still have both. We would not change a single thing.<br><br>
+      You wrestle with Jazzy on the floor. You have a rabbit named Carrots who has seen things. You went on the boat once and made a permanent life decision. You idle-rolled a car in a parking lot and retired from driving on the spot. You floated an entire Georgia river before the adults got their feet wet. You stood in the rain with Grandma so she wouldn't be alone. You flanked Papa Mike on both sides with a stick and didn't leave until he crossed. You stood up to your big brother when it mattered. You never took sides even when someone really, really wanted you to. You showed up to school <strong>every single day</strong> even when it was the hardest thing you did that day — and some days it really was.<br><br>
+      <em>You kept your promise to yourself.</em><br><br>
+      Now go fix the electricity. Find the snow. Take Jazzy somewhere with mountains. Put hot sauce on something that doesn't need it. Eat every Doritos Locos Taco in every city you visit. Find the sourest candy in every country on your list. And wherever you go — <strong>keep making people feel the way only you know how to make them feel.</strong><br><br>
+      We love you, Zack Attack. Class of 2026. Go be legendary.
+    </div>
+    <div class="closing-rule">"If you want it, go and get it." — Zachy's own rule, on the record</div>
+    <span class="closing-emojis">⚡ 🦁 🌨️ 🐶 🐰 ❤️</span>
+
+    <div class="photo-2" style="margin-top:32px;">
+      <div class="p-frame gold-f h220">
+        <div class="ph"><span class="phi">👶</span><span class="phl">Baby Zachy — The Beginning</span></div>
+      </div>
+      <div class="p-frame green-f h220">
+        <div class="ph"><span class="phi">🎓</span><span class="phl">Graduate Zachy — The Next Chapter</span></div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:16px; font-family:'Caveat',cursive; font-size:1rem; color:var(--muted);">
+      ...or rather, the beginning.
+    </div>
+  </div>
+</div>
+
+<div class="shine-bar"></div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>May 30th, 2026 · Luv'n Oven Ale House Patio · Sunrise, FL · Class of 2026 · ⚡ Zack Attack 🦁</p>
+</div>
+
+</body>
+</html>
