@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Legend of Zack Attack — Class of 2026</title>
+<!-- Prefetch the gallery page so it's ready by the time the visitor clicks through -->
+<link rel="prefetch" href="gallery.html" as="document">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bangers&family=Caveat:wght@600;700&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -224,6 +226,11 @@
     flex-flow: row nowrap;
     align-items: flex-start;
     width: 240px;
+  }
+  @media (max-width: 600px) {
+    .callout.callout--alt { flex-direction: column; }
+    .callout.callout--alt .callout-content { padding-right: 0; }
+    .callout.callout--alt .callout-float { width: 100%; }
   }
   .callout.gold { background: #1c1800; box-shadow: inset 0 0 0 1.5px rgba(212,160,23,0.35); }
   .callout.green { background: #0a0f1e; box-shadow: inset 0 0 0 1.5px rgba(64,96,160,0.4); }
@@ -712,10 +719,6 @@
     
   </div>
 
-  <div class="prose">
-    Okay so here's the thing about Zachy that nobody warns you about before you meet him.
-  </div>
-
   <div class="photo-2">
     <div class="p-frame gold-f" style="overflow:hidden"><img src="zjazz.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
       <div class="ph"><span class="phi">🐶</span><span class="phl">Jazzy — 100 lbs of fluff</span></div>
@@ -738,7 +741,7 @@
 
   <div class="callout green">
     <div class="callout-title">💚 ENDEARING FACT № 2</div>
-    <p>Jazzy's breed was literally built for snowy mountains. I've spent my whole life in Florida dreaming of snow. <strong>We found each other and honestly it makes total sense.</strong> When I finally get to see snow — and I will — she's coming with me. That's not even a question.</p>
+    <p>Jazzy's breed was literally built for snowy mountains. I've spent my whole life in Florida dreaming of snow. <strong>We found each other and honestly it makes total sense.</strong> </p>
   </div>
 
 
@@ -755,7 +758,7 @@
   </div>
 
   <div class="prose">
-    I'll try pretty much anything. I'm not picky. I just eat lightly — always have. But I do have my favorites, and they've been the same for a long time. Some things you just don't change — some things are just good!
+    I'll try pretty much anything. But I do have my favorites, and they've been the same for a long time. Some things you just don't change — some things are just good!
   </div>
 
   <div class="p-frame gold-f photo-wide" style="overflow:hidden"><img src="donut.jpg" style="width:100%; display: block;">
@@ -776,7 +779,7 @@
 
   <div class="callout gold">
     <div class="callout-title">⚠️ OFFICIAL DISCLAIMER</div>
-    <p>I know what I like. I don't need to overthink it. <strong>Simple is fine with me.</strong></p>
+    <p>I know what I like. I don't overthink it. <strong></strong></p>
   </div>
 </div>
 
@@ -791,11 +794,9 @@
   </div>
 
   <div class="prose">
-    I'm up for pretty much anything. Throwing axes? Let's go. Shooting arrows, air hockey, kickball, roller coasters? Every single one. ATVs at Uncle Kevin's with all the cousins? YES — one of my favorite things. I'll float a river, pick up rocks, and I'm always outside perfecting my 3 pointer — <em>swoosh.</em> <strong>If it's fun, I'm in!</strong> Except boating... unless it's a CRUISE! Those are always fun — especially with my family.
+    I'm up for anything. Throwing axes? Let's go. Shooting arrows, air hockey, kickball, roller coasters? ATVs at Uncle Kevin's with all the cousins? — one of my favorite things. I'll float a river, pick up rocks, and I'm always outside perfecting my 3 pointer — <em>swoosh.</em> <strong><br />If it's fun, I'm in!</strong> NOT Boating..  unless it's a CRUISE!— especially with my family.
   </div>
-  <div class="prose">
-    There are exactly two things that didn't make the list.
-  </div>
+  
 
   <div class="photo-3">
     <div class="p-frame gold-f h216" style="overflow:hidden"><img src="beach.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
@@ -809,23 +810,21 @@
     </div>
   </div>
 
-  <div class="prose">
-    All of that? Fine. Great, even. <strong>The boat, though? That's a whole different conversation.</strong>
-  </div>
+ 
 
   <div class="callout gold">
     <div class="callout-title" style="color:#e63946; font-weight:900;">💥 FUN FACT — 🚤 THE BOAT</div>
-    <p>I went boating with my dad, Christopher, and Uncle Oliver — I gave it a real shot. <strong>Hated every second of it.</strong> No hard feelings. Just not for me! Unless it's a CRUISE! Now that, I can do over and over.</p>
+    <p>I went out fishing with my dad, Christopher, and Uncle Oliver — I gave it a real shot. <strong>Hated every second of it.</strong>.</p>
   </div>
 
   <div class="callout gold">
     <div class="callout-title" style="color:#e63946; font-weight:900;">💥 FUN FACT — 🚗 DRIVING</div>
-    <p>I've been in a parking lot. I rolled forward. I stopped. I rolled forward again. I looked at Florida traffic outside that parking lot. <strong>I'm taking my time with this one.</strong> Have you seen how people drive down here? I'm good.</p>
+    <p>I've been in a parking lot. I rolled forward then I stopped. I looked at Florida traffic outside that parking lot. <strong>I'm taking my time with this one.</strong> Have you seen how people drive down here? I'm good.</p>
   </div>
 
   <div class="callout gold">
     <div class="callout-title" style="color:#e63946; font-weight:900;">💥 FUN FACT — 🎮 MY HEADSET</div>
-    <p>I use my VR headset a lot. It's where I go when I need to step away from everything for a while — decompress, recharge, just be. <strong>Everyone needs a place like that. That's mine.</strong></p>
+    <p>What do I do to decompress? My OCCULUS. It's where I go when I need to step away from everything for a while — decompress, recharge, just be. <strong>Everyone needs a place like that.</strong></p>
   </div>
 </div>
 
@@ -842,7 +841,7 @@
 
 
   <div class="photo-4">
-    <div class="p-frame gold-f" style="overflow:hidden"><img src="coaster.jpg" alt="" style="display: block;">
+    <div class="p-frame gold-f" style="overflow:hidden"><img src="kiggs.jpg" alt="" style="display: block;">
     </div>
     <div class="p-frame gold-f" style="overflow:hidden"><img src="golf.jpg" alt="" style="display: block;">
     </div>
@@ -853,14 +852,14 @@
   </div>
 
   <div class="prose">
-    Before any adult had stepped foot in the water, Zachy and Miki had already started their solo journey down the rapids of Helen — and ended up floating the <strong>entire river on their own.</strong> Two cousins who saw an opportunity and seized it. Don't think they will ever forget this.
+    Before any adult had stepped foot in the water, Zachy and Miki had already started their solo journey down the rapids of Helen — and ended up floating the <strong>entire river on their own.</strong> Two cousins who saw an opportunity and seized it. I Don't think they will ever forget this.
   </div>
 
   <div class="callout gold">
     <div style="float:right; width:140px; overflow:hidden;border-radius:8px;margin:0 0 8px 12px;border:2px solid var(--gold)"><img src="atl.jpg" style="display: block; width: 100%;"></div>
-    <div class="callout-title">🏔️ THE MOMENT EVERYONE REMEMBERS</div>
-    <p>Papa wanted to cross the river. The current was real. And Zachy — 14 — and Miki — 12 — picked up a stick each and took their place on either side of him.</p>
-    <p>Zachy &amp; Miki walked closely to Papa and encouraged him the whole way across and back.</p>
+    <div class="callout-title">🏔️ A MOMENT </div>
+    <p>Papa wanted to cross the river behind the house, Zachy-14 and Miki said c'mon Papa, lets do it together... Not knowing if he could, he followed their command and FUN was had.</p>
+    <p>Zachy &amp; .</p>
     <p>Papa crossed that river. He was proud of himself — and deeply proud of those two young people who stood beside him the entire way. That is Zachy in one moment. <em>Fourteen years old, and already the kind of person who stays.</em></p>
   </div>
 
@@ -899,12 +898,12 @@
   </div>
   <div class="callout gold">
     <div class="callout-title"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAB4AFoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCBRkIXA3jripCaQkE8UUjnF+93qBhjgHpUjtsjLelQg8c1EjSOw3NABIz2pygEVp6VAsaNcSuUAOA2QBii9gtcy1Uk8An6U6A5kKtnBNXNRnjnmBt8FV/jIwxqhysg3Hlj1ppiaJnlaN3jTIHQ+9WLdXSOZT1eMjH5GqgO+Td3HetLSSZL4K43KUYc+4pN2Vyo7lOGTII6Y7Um40+aHyHl7jtVfcfWmnoJqzsThjTgFeOVw6jylyQSBk+gpjJvG3OM+lMl08rbqUDiTOMHnNaxcb+8KMHJXQ1ZllUrjBx0NNiVncKvVuKjFtNFL+9UoRyOOv8AhW1ZWyWmnvdzffkGEB7A96VZRT90cYu9mEejElV85HOcsF9Pak1iOeIJGImS2XgMOjGqu5zPFGgDnqAfb37UWesZuRHd5MDZVlbkAGsvZylqkaXjsVQwI2nj39KWWKVkj2BcDr3zV3VNONm4kjO+B/ut6exqrHN5ULs3QdPrTiruyM35kMeVGGOTV7SnC6jGWbCrkseuBVJkIsxdF0OX27AecU/TWEt3FjgbuRVzpOKuwi9UWdWMZvB5Ll1Kg8jH4VTwat6lHjUpAo4OD+lVqzi9Bz3E+2Qj+PH4Gta0vBLCrwlnOcHjjP1rnLs7JREr7uPmxxg9xT1vbhbQWwfbEM/d4Jz6muv6s5pNMVOfs27mle3sZldWkQ7TggHrV/Uy1zpscsJHlKASo9K5XjPy9RVz+1mhsZLQD/WLwR2GeRU1MM42sONTmbuKltPdPmMBkHAOelDaXdIFcxfLkDaTzUWmag1nMPMUPCx+YY/Wrmo60zsq2wwo5J5AI/nT5asXyrYpclrs2bSVn0aSK6XciqQp+nQ1iRx+dA6Z2tnKk1Xh1Rhp/wBjIJZn2jHZT1oWZbaZQSdyHBRicD1zWfsppuwnKN1oOktZhnbGx9wKsaRCyz7yCCnJB7Gkv9T2gpAR82M7G4/Oqmn37QiZSS0krDGf51Uvazp6lWgpaGq0xluZHfGQMDFVKRVZc4lPPqBTfKf/AJ7H8hWSpMxdWLdyx9mtZ5pi0e1jIcuG59aih0W7mSNo0wHJ+9xgA4z/APqqTTLGVroNI/yTZ8w5xtNdEPtEdmd2x5tuFCfIAeP4uvPtWlOs6elzacOZ7HJ6rpX9mrCTNvmbO4Dp+Heor/TJ7e3WaYBRx+vatqfTlkHmandhduSqRcKpPU89TWJfTlUW3S4ae33Btpzjj+X4VvGqpe6nqRKm1qxHspoIEllQhH4B98Z598VZ0/TWvJgXRkhIPz9BnHH157VvKEkswJ7VRG0Y2LJdKQo7Yz06nnmq+r36QabDBaSIu/5R5bbvlHB+b68cVp7Rv3VuZ8ttTAtohAk9wwDNENseegbsfwqsq88nJ9+9SFmaN41BIJDHHoK0NK0pdQR/mdZAwGRjAHfjqapWi3Jg3dJEOn2D6hcLCpCKBl3PRRWpp2nwL4hbys7IVzg8/NgD8uatRrFommXDLI/msdofGAzc4AB9up+tU/D0xe/lMjFndCSSeSc81lUk5Rk1sVFWaR1AhQ/wL+VH2aP/AJ5p/wB8ilQnHU07cfWvPOo5Q3It51iyQZBkYzx+VQ6zeX0DRqhaOFlDb1XqT70t6XjeGWJikiE4YdelVdQ1K8voo7ed18pSOFXGfc1tGCupWIlNr3TPYvMSWLO3qxzUjW8gVWC54wQKmCCJcr3655rTsEEk0KsMjvW06jTXKZxSd7mAMLzjp2bHFPB43E/hXW3ej2t1y6Df6jg/jTI/DlnCAzB3P+0xA/KtFiF1RHIc3BamVdxJAB7d/WtAS22kzTRyRSXAkRHjXOFPX7x64z2q95KJkIAFB4AqrqSRz2A4HmwA/PnoP7p+tc/tXKprsb8iUdNzKubue8maW4kLMxxjsB6AelXdGk8rUYSejHafxrKHOT2HAqzbttlQ+4r0OVOLict2nc9AQ8U+oIjgAVNmvHO45DUiRJGvbBNZbH/SQD6Vp6xuR4mA4wRWO+5pVfHSuiLtE55q8jQZVaPk9BV7RV3zA5zsH51mCYMuMGtXRpYoQ3mNtZu56UTFDqblwyiIM2SM44zwaUgbMAn3yahuZovsrneo44570+NxJBkHqKyLsUCvX61hahatNfkIByBya6A9KznUfbCT6AfWqpSad0VV+EyZLbyZER+hPzEVrWltEWj+RSCwHSob1PnOOigc1btPlEZ/2h0Oa0cnK9zG1rHQR1JmokqWuU6zFuowYyCM8VnTwL5q4AA21dv5yltIy43BSRyKwxqbuwLJ8qrnOeSO1Va4nKxpJZRbUYIMnOaeYQBjFRWeopcOkaqR8p7e9W2Ze/H4UWfULroTXcSeXAqjG5xnHfinRxhXKqSF7jNPuY8JaySOqRrlixOe3tTYJEkyyMGBPBFTZod0xZFwKyX3/bXUsFDYxmteTmsu6A88A8ZGRWtPcyq/CR3RVlkK4JC84PFW9PZXjTkZBAK45FUlUs8ykg5XtUlg43xt06Z/OrtuZdEdKlSVBGalzXOdRzt5Y+ahAGRjsKzpNPRwiIoJz8wjVgfzfH5UUVqjJlq00+SEOnKAkEbiNx/AHgfWny2zxE/vCobqSaKKXUa2IZ4WEaNGAQGywHXHrirNtKR/qTkE9CP6UUUMSJnllB5jT8qzr64+ZAzLF1560UVUdGOWqsRpcxruKsr5GMrxSWokOCsqBh0UH+dFFWnqzJx0SOjhul2jO8H3Wp/tUX/PT/x2iiuex0H/2Q==" alt="Dodgers baseball trophy" style="float:right;width:80px;height:80px;object-fit:cover;border-radius:8px;border:2px solid var(--gold);margin:0 0 8px 12px;">🏈 HIS NICKNAMES ON THE FIELD</div>
-    <p>Coach Dennis and his teammates named him <strong>Earthworm</strong> and <strong>Zack Attack.</strong></p>
+    <p>Coach Dennis and my teammates named me <strong>Earthworm</strong> and <strong>Zack Attack.</strong></p>
   </div>
   <div class="callout gold callout--card">
     <div class="callout-content">
       <div class="callout-title">🚐 MOM & ZACHY</div>
-      <p>Mom will tell you her most treasured memories are the hours we spent waiting in the minivan during Christopher's basketball practice — just the two of us, Snapchat and the front seat, <strong>laughing the whole time.</strong> Unplanned, and completely irreplaceable.</p>
+      <p>Mom will tell you her most treasured memories are the hours we spent waiting in the minivan during Christopher's basketball practice — just the two of us, Snapchat and the front seat, <strong>laughing the whole time.</strong> Unplanned, and irreplaceable.</p>
     </div>
     <div class="callout-float">
       <img src="mom.jpg" style="width: 100%; display: block; border:2px solid var(--gold); overflow: hidden; border-radius: 8px;">
@@ -923,7 +922,7 @@
   </div>
   <div class="callout gold">
     <div class="callout-title"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAB4AFoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlRggEDH1qXgRr9KgAwVpGy3U9Klq5SdjejuYCqoJVzgDGapTn983PGeRVBAcE56VYibdwx/OoUOV3LcubQcg+SQhtw2/lTl4jNGwpG+e5GKVh+6PuaOpLLtpEvlF+pbrUhBUYHK/3TUyptQADGBTXFdMVYzZnzwq/3Pkf0NVXDISHHPrWnIMg59aqzDahzyAOhpOI7lNWKn2p/nD3qPg8rkA9jThDx1qAK59PSnJjHuKjJJ5PU80KcGkMsLjaw6c1JlVXkdeoqFBu71LDs8wLKDtPBxUlIcJWcbT25+tXLeLzHRcZAIJp82mwwRbo7gvJgErjgZ96tW8Ai+ck7sYxniiKT1QSutGTGo2608moXbrXQmZkT9BVS7P7sj1OKtOeapXRyyj8aJPQEVlXL4qxio4h8xJPU1PisxmeqhlXNI8e1hitlbLTNuFupRjvj/61U7hIom2xS+cvqVxWKndm3LpqMhgJICjLdhmrv9ny26pPInQ8g9KrRZwCOoq7NdTTRRrn7p61LbNIpGw62otnIO1bgZA7A1VY8VLp8CyQCO5ydrfdBxtNWptM3Lutn3f7LdfzpwkloyasW9UZjGoWNSzI8bESKyn3FV2NbpnOMY81SmOZj7CrbGqPLFiP4jRJgiWEfLn15qSmrgAAUuaQy9cWu1cgVReKuouYVKjOBWfJY7jwPyrmUjqcTHjUhgAK3LLS4ri3bz8hj0IPSoYtPPmDPQUSzT2+oBA29GI4PAx6UN3GtDQs7Z3ikQptkQ48zs+KrJc3kEpDROPbBrUW5CjGAPYUNeBSDnj3qStSOO6lmXDWznPqv+NI+nRTnLwrH7jg0Samg4UjNQNfoTl5PwFCb6CaXUqX2hOsbPbS7sDOwjk/Q1geViujn1faMQjJ9TWKwLMWI5JzXRBt7nPNRWxV8uja3qfzqztq4um7lBLgEjOMVTlGO5Ci5bF7XrgwwoqnlnH6VWtdQLLhqh8QuXuEI5VOD9TWfG+OhrDl0Ojm1OliuA3em3SxXChJM8cgjsaxYZ2Q9auicuo45pWKuSJK0EQViHI4BFQySPI2WP4U0bmkxyfQCrEMWyZGnQpFnqwwCfSqskZSbZAbeQYJQ81LHajGW5PpU+rwTOsfkBmH3mKH8v61RiuWhUJI7DB6yLyfbNNpy0ixRajrJFhrRG6ZU1E9lIOV+Ye1W4JDLyMEDvnOanxjnoa5/aTg7M3UITV0Y4iIcKRjnvV4zAEjjinXN9bW/wAs+GYfwgZNZL3tozs32WTk5/1xrW7qatGelPS4rEzfaw/J3E/pxWeh4roXS1JYhApbqVOM1S+xWaHrIf8AgVWpITgypAVB5rWs7dp3C9F6k/4VWDW8AxFGoPqeTWjZStPlUbkDgUmykuhrxWgihk+yxIzqD8x5BPoPX6mqxkjuYkRlxlv3gcYxVWPUst5MjPC3Q4JBqxNNBvRri78rnIZ1DBz3B9sUn7xPK4ouxpDHGqAqFUcDPSq9yLZSyuVbK5AJ/rVfUYg7C4sJl8g/eUKePeqW55meJ3CEchcYBrGzT3KWpeigjEKy264jcbh8uPxpJVfYfLIDVY0/csYtmYEA4Q7cYP8Anj3qpq1wLGAzBc5xtX3Pb8MGlKGziXGe6kcnfeal5IZQdxPfvUfmL6n8qmvL+W8/1qR8dCBg1UyPSuyN7anLK19DTa5Xu9EcgkON4X61ZuLJUyQOKpmLFc6knsdTTRcWCJhzISfalhd7OcOpJX1qkCVNXrVt6FWGQaTutR6M1AttqLrLKNu1SSckE47VSvYpTYISSWWTIyM8Y9qWJJbeTfE2VPVamGpw/PFd2shRj94HnH0qlJMmUWrjrOK4vLBViAjhAyQCcse9aFlaM8ckZjBZDjDcDOOuajt9Q0uNAscpiAOQpVhinTa3aRqRHPnPZEOT+lHJqRzO1kaDsUWNJNq7GDvtOcAf1JrF14rJa+W4+Yfe9iST+maqtqzyONisqA5yeOfXH9aq6leCSJFU9iTTb1SQlGybZiOmOnNR1bBx97pS5j9P0ra5k0dCwyKpTwYOR+VFFefF6noyRWMeas26bFoorST0M4rUux5wKnVVcYIBoorJmg17ZB/Ap/Cqc0KqfuiiiqiyWtCtItU3TfIQ2QMUUV0RMJIasLKSTggjg07yj6LRRVXZk0f/2Q==" alt="Zachy upside down ADHD" style="float:right;width:80px;height:80px;object-fit:cover;border-radius:8px;border:2px solid var(--gold);margin:0 0 8px 12px;">🧘 A ZACHY MOMENT</div>
-    <p>Mom asked me to settle down while she was loading groceries. I climbed in the back of the van and started meditating. No explanation needed. <strong>Just vibes.</strong></p>
+    <p>Mom asked me to settle down while she was loading groceries. I climbed in the back of the van and started meditating. No explanation. <strong>Just vibes.</strong></p>
   </div>
 
   <div class="stats-row">
@@ -949,7 +948,7 @@
     But here's what most people don't know.
   </div>
 
-  <div class="callout gold callout--card callout--alt">
+  <div class="callout gold callout--card callout--alt" id="WhatIWantYouToKnow">
     <div class="callout-content">
       <div class="callout-title">✦ WHAT I WANT YOU TO KNOW</div>
       <p>High school wasn't always easy for me. There were real challenges most people around me never had to think about. Hard days where just walking through those doors took more out of me than anyone watching could have guessed. I never made it the headline. <strong>I keep showing up.</strong></p>
@@ -995,7 +994,7 @@
   </div>
 
   <div class="prose">
-    And my hugs — my grandma said it best: <em>"You can feel his love for you through them."</em> <strong>I just hug people the way I mean it. That's all I know how to do.</strong>
+    And my hugs — my grandma said it best: <em>"You can feel his love for you through them."</em> <strong>I just hug people the way I mean it.</strong>
   </div>
 
   <div class="callout gold">
@@ -1029,16 +1028,16 @@
   <div class="callout gold">
     <div class="callout-title">📖 STORY № 1 — CEDAR KEY, FLORIDA: THE CEILING FAN INCIDENT</div>
     <p>The family went to Cedar Key for a weekend trip. Nothing fancy — just the gulf, the quiet, and a rental house with, critically, a ceiling fan.</p>
-    <p>Nobody can fully reconstruct the physics of what happened next. There was Zachy — somewhere around twelve or fourteen years old. There was a pair of underwear. There was the ceiling fan. There was, presumably, some sort of throwing motion. And then there was Zachy's underwear — <strong>fully stuck on the ceiling fan.</strong> Just up there. Hanging out. New permanent resident of the rental house.</p>
+    <p>Nobody can fully reconstruct the physics of what happened next. There was Zachy,. There was a pair of underwear. There was the ceiling fan. There was, presumably, some sort of throwing / flinging / Tossing?. And then there was Zachy's underwear — <strong>fully stuck on the ceiling fan.</strong> Just up there. Hanging out. New permanent resident of the rental house.</p>
     <p>The family will tell you the story slightly differently every time. The blades were spinning. The blades were stopped. Zachy was laughing. Zachy was mortified. <em>It is impossible to determine which version is true</em> because everyone present was crying with laughter and no court would accept their testimony.</p>
     <p>The underwear came down eventually. <strong>The story has not.</strong></p>
   </div>
 
   <div class="callout green">
     <div class="callout-title">📖 STORY № 2 — THE BACK PORCH SLIP AND SLIDE</div>
-    <p>It was one of those Florida afternoons where the sky just opens — wind, sideways rain, the kind of storm that sends most kids inside to complain about the wifi.</p>
-    <p>Not Zachy and his cousin JonJon.</p>
-    <p>They looked out at the soaking back porch and saw, with full clarity, <strong>an opportunity.</strong> A tarp. Some soap. Whatever hose situation they could improvise. The storm itself providing free water pressure from above. And just like that — the entire back porch became a fully homemade, fully soaped-up, <strong>completely working slip and slide.</strong></p>
+    <p>It was one of those Florida afternoons where the sky just opens — wind, sideways rain, the kind of storm that sends most kids inside to complain. </p>
+    <p>Not Zachy and his JonJon.</p>
+    <p>They looked out at the soaking back porch and saw, with full clarity, <strong>an opportunity.</strong>  Some soap, hose and soap, just improvise. The storm itself providing free water pressure from above. And just like that — the entire back porch became a fully homemade <strong>slip and slide.</strong></p>
     <p>They had the time of their lives. The porch survived. Nobody got hurt. The parents had concerns. Zachy and JonJon had <em>a perfect day,</em> made entirely out of a day that was supposedly ruined.</p>
     <p>Engineering school missed out. <strong>The future electrician started early.</strong></p>
   </div>
@@ -1063,15 +1062,15 @@
       <div class="gp-name">💛 Grandma Betty &amp; Papa</div>
       <div class="gp-item">
         <div class="gi-icon">🍬</div>
-        <div class="gi-text">Sat with Grandma Betty in the <span>rain</span> on Halloween to pass out candy — because he said he didn't want her to be alone out there.</div>
+        <div class="gi-text">Sat with Grandma Betty in the <span>rain</span> on Halloween to pass out candy — because he didn't want her to be alone.</div>
       </div>
       <div class="gp-item">
         <div class="gi-icon">⚖️</div>
-        <div class="gi-text">Never once took sides between Grandma Betty and Papa. <span>Even when Grandma really, really, genuinely wanted him to.</span> 😄 He loved them both equally and wouldn't budge.</div>
+        <div class="gi-text">Never once took sides between Grandma Betty and Papa. <span>Even when Grandma really really wanted him to.</span> 😄 He loves them both equally and wouldn't budge.</div>
       </div>
       <div class="gp-item">
         <div class="gi-icon">💪</div>
-        <div class="gi-text">Stood up to big brother Christopher — <span>twice his size</span> — when it mattered. Did it anyway. No hesitation.</div>
+        <div class="gi-text">Stood up to big brother Christopher — <span>twice his size</span> — when it mattered.</div>
       </div>
       <div class="gp-item">
         <div class="gi-icon">🔮</div>
@@ -1083,7 +1082,7 @@
       <div class="gp-name">💙 Grandma Irene</div>
       <div class="gp-item">
         <div class="gi-icon">🏅</div>
-        <div class="gi-text">Has been at <span>every single game, every single event</span> — basketball, baseball, all of it — for all her grandchildren. Never missed one. Not once.</div>
+        <div class="gi-text">Has been at <span>every single game, every single event</span> — basketball, baseball, all of it — for all her grandchildren. </div>
       </div>
       <div class="gp-item">
         <div class="gi-icon">💙</div>
@@ -1099,13 +1098,11 @@
   <div class="durwood-memorial">
     <div class="dm-title">❤️ In Loving Memory — Grandpa Durwood</div>
     <p>
-      Durwood was the <strong>steady figure.</strong> The quiet one. The strong one. The kind of man whose presence made everything feel solid and safe without him ever needing to say a word about it. He built a family of six children and showed up for every single one of them — and for every grandchild too. He was simply <strong>always there.</strong>
+      Durwood was the <strong>steady figure.</strong> The quiet one. The strong one. The kind of man whose presence made everyone feel safe without him needing to say a word. He built a family of six children and showed up for every single one of them — and for every grandchild too. He was simply <strong>always there.</strong>
     </p>
+    
     <p>
-      Off the bowling lanes he was just as steady — but ask anyone who spent time with him, and they'll tell you: Durwood knew how to have fun. He once put a St. Patrick's Day hat on his head mid-game and <strong>bowled the entire rest of the game with it on</strong> without offering a single word of explanation. Just Durwood. Hat on his head. Completely at peace. Quiet joy. No performance needed. That was him in one perfect moment.
-    </p>
-    <p>
-      He passed away suddenly when Zachy was still young — but the love he poured into this family lives on in every person in this room today. <strong>He is here in spirit, watching Zachy cross this finish line, and he is so incredibly proud.</strong> 🎩❤️
+      Durwood passed when Zachy was still young — but the love he poured into this family lives on in every person in this room today. <strong>He is here in spirit, watching Zachy cross this finish line, and he is so incredibly proud.</strong> 🎩❤️
     </p>
   </div>
 </div>
@@ -1137,7 +1134,7 @@
     I graduated. I said I would and I did. So here's what's next.
   </div>
   <div class="prose">
-    I'm going to trade school to become an <strong>electrician.</strong> It's a real skill, real work, and something I'm genuinely interested in. I've always been good with my hands and I like knowing how things work. <strong>This feels right. ⚡</strong>
+    My plan is to become an <strong>electrician.</strong> It's a real skill, real work, and something I'm interested in. I've always been good with my hands and I like knowing how things work. <strong>This feels right. ⚡</strong>
   </div>
 
   <div class="callout gold">
@@ -1187,7 +1184,7 @@
       To everyone here today — thank you for being part of my story. You're in more of it than you probably know.<br><br>
       Now if you'll excuse me — I have electricity to learn, snow to find, and Jazzy needs to see a mountain.<br><br>
       <strong>— Zachy. Class of 2026. ⚡</strong><br><br>
-      <em>From everyone who loves you — we are so incredibly proud. Go be legendary.</em>
+      <em>From everyone who loves you — we are so incredibly proud.<br />Go be legendary.</em>
     </div>
   </div>
 </div>
